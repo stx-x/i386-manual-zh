@@ -1,0 +1,761 @@
+{
+  "parts": [
+    "Part I Applications Programming",
+    "Part II Systems Programming",
+    "Part III Compatibility",
+    "Part IV Instructions Set"
+  ],
+  "chapters": [
+    {
+      "id": "c01",
+      "num": 1,
+      "en": "Introduction to the 80386",
+      "part": null,
+      "page": 15
+    },
+    {
+      "id": "c02",
+      "num": 2,
+      "en": "Basic Programming Model",
+      "part": "Part I Applications Programming",
+      "page": 16
+    },
+    {
+      "id": "c03",
+      "num": 3,
+      "en": "Applications Instruction Set",
+      "part": "Part I Applications Programming",
+      "page": 16
+    },
+    {
+      "id": "c04",
+      "num": 4,
+      "en": "Systems Architecture",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c05",
+      "num": 5,
+      "en": "Memory Management",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c06",
+      "num": 6,
+      "en": "Protection",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c07",
+      "num": 7,
+      "en": "Multitasking",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c08",
+      "num": 8,
+      "en": "Input/Output",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c09",
+      "num": 9,
+      "en": "Exceptions and Interrupts",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c10",
+      "num": 10,
+      "en": "Initialization",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c11",
+      "num": 11,
+      "en": "Coprocessing and Multiprocessing",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c12",
+      "num": 12,
+      "en": "Debugging",
+      "part": "Part II Systems Programming",
+      "page": 17
+    },
+    {
+      "id": "c13",
+      "num": 13,
+      "en": "Executing 80286 Protected-Mode Code",
+      "part": "Part III Compatibility",
+      "page": 18
+    },
+    {
+      "id": "c14",
+      "num": 14,
+      "en": "80386 Real-Address Mode",
+      "part": "Part III Compatibility",
+      "page": 18
+    },
+    {
+      "id": "c15",
+      "num": 15,
+      "en": "Virtual 8086 Mode",
+      "part": "Part III Compatibility",
+      "page": 18
+    },
+    {
+      "id": "c16",
+      "num": 16,
+      "en": "Mixing 16-Bit and 32 Bit Code",
+      "part": "Part III Compatibility",
+      "page": 18
+    },
+    {
+      "id": "c17",
+      "num": 17,
+      "en": "80386 Instruction Set",
+      "part": "Part IV Instructions Set",
+      "page": 90
+    }
+  ],
+  "sections": [
+    {
+      "id": "s01_01",
+      "num": "1.1",
+      "en": "Organization of This Manual",
+      "chapter": "s01",
+      "page": 15
+    },
+    {
+      "id": "s01_02",
+      "num": "1.2",
+      "en": "Related Literature",
+      "chapter": "s01",
+      "page": 19
+    },
+    {
+      "id": "s01_03",
+      "num": "1.3",
+      "en": "Notational Conventions",
+      "chapter": "s01",
+      "page": 19
+    },
+    {
+      "id": "s02_01",
+      "num": "2.1",
+      "en": "Memory Organization and Segmentation",
+      "chapter": "s02",
+      "page": 22
+    },
+    {
+      "id": "s02_02",
+      "num": "2.2",
+      "en": "Data Types",
+      "chapter": "s02",
+      "page": 24
+    },
+    {
+      "id": "s02_03",
+      "num": "2.3",
+      "en": "Registers",
+      "chapter": "s02",
+      "page": 29
+    },
+    {
+      "id": "s02_04",
+      "num": "2.4",
+      "en": "Instruction Format",
+      "chapter": "s02",
+      "page": 35
+    },
+    {
+      "id": "s02_05",
+      "num": "2.5",
+      "en": "Operand Selection",
+      "chapter": "s02",
+      "page": 36
+    },
+    {
+      "id": "s02_06",
+      "num": "2.6",
+      "en": "Interrupts and Exceptions",
+      "chapter": "s02",
+      "page": 42
+    },
+    {
+      "id": "s03_01",
+      "num": "3.1",
+      "en": "Data Movement Instructions",
+      "chapter": "s03",
+      "page": 45
+    },
+    {
+      "id": "s03_02",
+      "num": "3.2",
+      "en": "Binary Arithmetic Instructions",
+      "chapter": "s03",
+      "page": 50
+    },
+    {
+      "id": "s03_03",
+      "num": "3.3",
+      "en": "Decimal Arithmetic Instructions",
+      "chapter": "s03",
+      "page": 53
+    },
+    {
+      "id": "s03_04",
+      "num": "3.4",
+      "en": "Logical Instructions",
+      "chapter": "s03",
+      "page": 54
+    },
+    {
+      "id": "s03_05",
+      "num": "3.5",
+      "en": "Control Transfer Instructions",
+      "chapter": "s03",
+      "page": 65
+    },
+    {
+      "id": "s03_06",
+      "num": "3.6",
+      "en": "String and Character Translation Instructions",
+      "chapter": "s03",
+      "page": 69
+    },
+    {
+      "id": "s03_07",
+      "num": "3.7",
+      "en": "Instructions for Block-Structured Languages",
+      "chapter": "s03",
+      "page": 72
+    },
+    {
+      "id": "s03_08",
+      "num": "3.8",
+      "en": "Flag Control Instructions",
+      "chapter": "s03",
+      "page": 79
+    },
+    {
+      "id": "s03_09",
+      "num": "3.9",
+      "en": "Coprocessor Interface Instructions",
+      "chapter": "s03",
+      "page": 80
+    },
+    {
+      "id": "s03_10",
+      "num": "3.10",
+      "en": "Segment Register Instructions",
+      "chapter": "s03",
+      "page": 81
+    },
+    {
+      "id": "s03_11",
+      "num": "3.11",
+      "en": "Miscellaneous Instructions",
+      "chapter": "s03",
+      "page": 83
+    },
+    {
+      "id": "s04_01",
+      "num": "4.1",
+      "en": "Systems Registers",
+      "chapter": "s04",
+      "page": 85
+    },
+    {
+      "id": "s04_02",
+      "num": "4.2",
+      "en": "Systems Instructions",
+      "chapter": "s04",
+      "page": 89
+    },
+    {
+      "id": "s05_01",
+      "num": "5.1",
+      "en": "Segment Translation",
+      "chapter": "s05",
+      "page": 92
+    },
+    {
+      "id": "s05_02",
+      "num": "5.2",
+      "en": "Page Translation",
+      "chapter": "s05",
+      "page": 98
+    },
+    {
+      "id": "s05_03",
+      "num": "5.3",
+      "en": "Combining Segment and Page Translation",
+      "chapter": "s05",
+      "page": 102
+    },
+    {
+      "id": "s06_01",
+      "num": "6.1",
+      "en": "Why Protection?",
+      "chapter": "s06",
+      "page": 106
+    },
+    {
+      "id": "s06_02",
+      "num": "6.2",
+      "en": "Overview of 80386 Protection Mechanisms",
+      "chapter": "s06",
+      "page": 106
+    },
+    {
+      "id": "s06_03",
+      "num": "6.3",
+      "en": "Segment-Level Protection",
+      "chapter": "s06",
+      "page": 107
+    },
+    {
+      "id": "s06_04",
+      "num": "6.4",
+      "en": "Page-Level Protection",
+      "chapter": "s06",
+      "page": 126
+    },
+    {
+      "id": "s06_05",
+      "num": "6.5",
+      "en": "Combining Page and Segment Protection",
+      "chapter": "s06",
+      "page": 128
+    },
+    {
+      "id": "s07_01",
+      "num": "7.1",
+      "en": "Task State Segment",
+      "chapter": "s07",
+      "page": 130
+    },
+    {
+      "id": "s07_02",
+      "num": "7.2",
+      "en": "TSS Descriptor",
+      "chapter": "s07",
+      "page": 133
+    },
+    {
+      "id": "s07_03",
+      "num": "7.3",
+      "en": "Task Register",
+      "chapter": "s07",
+      "page": 134
+    },
+    {
+      "id": "s07_04",
+      "num": "7.4",
+      "en": "Task Gate Descriptor",
+      "chapter": "s07",
+      "page": 135
+    },
+    {
+      "id": "s07_05",
+      "num": "7.5",
+      "en": "Task Switching",
+      "chapter": "s07",
+      "page": 137
+    },
+    {
+      "id": "s07_06",
+      "num": "7.6",
+      "en": "Task Linking",
+      "chapter": "s07",
+      "page": 141
+    },
+    {
+      "id": "s07_07",
+      "num": "7.7",
+      "en": "Task Address Space",
+      "chapter": "s07",
+      "page": 142
+    },
+    {
+      "id": "s08_01",
+      "num": "8.1",
+      "en": "I/O Addressing",
+      "chapter": "s08",
+      "page": 145
+    },
+    {
+      "id": "s08_02",
+      "num": "8.2",
+      "en": "I/O Instructions",
+      "chapter": "s08",
+      "page": 146
+    },
+    {
+      "id": "s08_03",
+      "num": "8.3",
+      "en": "Protection and I/O",
+      "chapter": "s08",
+      "page": 148
+    },
+    {
+      "id": "s09_01",
+      "num": "9.1",
+      "en": "Identifying Interrupts",
+      "chapter": "s09",
+      "page": 152
+    },
+    {
+      "id": "s09_02",
+      "num": "9.2",
+      "en": "Enabling and Disabling Interrupts",
+      "chapter": "s09",
+      "page": 153
+    },
+    {
+      "id": "s09_03",
+      "num": "9.3",
+      "en": "Priority Among Simultaneous Interrupts and Exceptions",
+      "chapter": "s09",
+      "page": 155
+    },
+    {
+      "id": "s09_04",
+      "num": "9.4",
+      "en": "Interrupt Descriptor Table",
+      "chapter": "s09",
+      "page": 155
+    },
+    {
+      "id": "s09_05",
+      "num": "9.5",
+      "en": "IDT Descriptors",
+      "chapter": "s09",
+      "page": 157
+    },
+    {
+      "id": "s09_06",
+      "num": "9.6",
+      "en": "Interrupt Tasks and Interrupt Procedures",
+      "chapter": "s09",
+      "page": 157
+    },
+    {
+      "id": "s09_07",
+      "num": "9.7",
+      "en": "Error Code",
+      "chapter": "s09",
+      "page": 161
+    },
+    {
+      "id": "s09_08",
+      "num": "9.8",
+      "en": "Exception Conditions",
+      "chapter": "s09",
+      "page": 162
+    },
+    {
+      "id": "s09_09",
+      "num": "9.9",
+      "en": "Exception Summary",
+      "chapter": "s09",
+      "page": 172
+    },
+    {
+      "id": "s09_10",
+      "num": "9.10",
+      "en": "Error Code Summary",
+      "chapter": "s09",
+      "page": 173
+    },
+    {
+      "id": "s10_01",
+      "num": "10.1",
+      "en": "Processor State After Reset",
+      "chapter": "s10",
+      "page": 174
+    },
+    {
+      "id": "s10_02",
+      "num": "10.2",
+      "en": "Software Initialization for Real-Address Mode",
+      "chapter": "s10",
+      "page": 175
+    },
+    {
+      "id": "s10_03",
+      "num": "10.3",
+      "en": "Switching to Protected Mode",
+      "chapter": "s10",
+      "page": 176
+    },
+    {
+      "id": "s10_04",
+      "num": "10.4",
+      "en": "Software Initialization for Protected Mode",
+      "chapter": "s10",
+      "page": 176
+    },
+    {
+      "id": "s10_05",
+      "num": "10.5",
+      "en": "Initialization Example",
+      "chapter": "s10",
+      "page": 178
+    },
+    {
+      "id": "s10_06",
+      "num": "10.6",
+      "en": "TLB Testing",
+      "chapter": "s10",
+      "page": 185
+    },
+    {
+      "id": "s11_01",
+      "num": "11.1",
+      "en": "Coprocessing",
+      "chapter": "s11",
+      "page": 189
+    },
+    {
+      "id": "s11_02",
+      "num": "11.2",
+      "en": "General Multiprocessing",
+      "chapter": "s11",
+      "page": 192
+    },
+    {
+      "id": "s12_01",
+      "num": "12.1",
+      "en": "Debugging Features of the Architecture",
+      "chapter": "s12",
+      "page": 195
+    },
+    {
+      "id": "s12_02",
+      "num": "12.2",
+      "en": "Debug Registers",
+      "chapter": "s12",
+      "page": 196
+    },
+    {
+      "id": "s12_03",
+      "num": "12.3",
+      "en": "Debug Exceptions",
+      "chapter": "s12",
+      "page": 200
+    },
+    {
+      "id": "s13_01",
+      "num": "13.1",
+      "en": "80286 Code Executes as a Subset of the 80386",
+      "chapter": "s13",
+      "page": 204
+    },
+    {
+      "id": "s13_02",
+      "num": "13.2",
+      "en": "Two ways to Execute 80286 Tasks",
+      "chapter": "s13",
+      "page": 205
+    },
+    {
+      "id": "s13_03",
+      "num": "13.3",
+      "en": "Differences From 80286",
+      "chapter": "s13",
+      "page": 205
+    },
+    {
+      "id": "s14_01",
+      "num": "14.1",
+      "en": "Physical Address Formation",
+      "chapter": "s14",
+      "page": 207
+    },
+    {
+      "id": "s14_02",
+      "num": "14.2",
+      "en": "Registers and Instructions",
+      "chapter": "s14",
+      "page": 208
+    },
+    {
+      "id": "s14_03",
+      "num": "14.3",
+      "en": "Interrupt and Exception Handling",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s14_04",
+      "num": "14.4",
+      "en": "Entering and Leaving Real-Address Mode",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s14_05",
+      "num": "14.5",
+      "en": "Switching Back to Real-Address Mode",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s14_06",
+      "num": "14.6",
+      "en": "Real-Address Mode Exceptions",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s14_07",
+      "num": "14.7",
+      "en": "Differences From 8086",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s14_08",
+      "num": "14.8",
+      "en": "Differences From 80286 Real-Address Mode",
+      "chapter": "s14",
+      "page": 9
+    },
+    {
+      "id": "s15_01",
+      "num": "15.1",
+      "en": "Executing 8086 Code",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_02",
+      "num": "15.2",
+      "en": "Structure of a V86 Task",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_03",
+      "num": "15.3",
+      "en": "Entering and Leaving V86 Mode",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_04",
+      "num": "15.4",
+      "en": "Additional Sensitive Instructions",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_05",
+      "num": "15.5",
+      "en": "Virtual I/O",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_06",
+      "num": "15.6",
+      "en": "Differences From 8086",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s15_07",
+      "num": "15.7",
+      "en": "Differences From 80286 Real-Address Mode",
+      "chapter": "s15",
+      "page": 9
+    },
+    {
+      "id": "s16_01",
+      "num": "16.1",
+      "en": "How the 80386 Implements 16-Bit and 32-Bit Features",
+      "chapter": "s16",
+      "page": 9
+    },
+    {
+      "id": "s16_02",
+      "num": "16.2",
+      "en": "Mixing 32-Bit and 16-Bit Operations",
+      "chapter": "s16",
+      "page": 9
+    },
+    {
+      "id": "s16_03",
+      "num": "16.3",
+      "en": "Sharing Data Segments Among Mixed Code Segments",
+      "chapter": "s16",
+      "page": 233
+    },
+    {
+      "id": "s16_04",
+      "num": "16.4",
+      "en": "Transferring Control Among Mixed Code Segments>",
+      "chapter": "s16",
+      "page": 9
+    },
+    {
+      "id": "s17_01",
+      "num": "17.1",
+      "en": "Operand-Size and Address-Size Attributes",
+      "chapter": "s17",
+      "page": 9
+    },
+    {
+      "id": "s17_02",
+      "num": "17.2",
+      "en": "Instruction Format",
+      "chapter": "s17",
+      "page": 9
+    },
+    {
+      "id": "app",
+      "num": "APP",
+      "en": "Appendices",
+      "chapter": "app",
+      "page": null
+    },
+    {
+      "id": "appa",
+      "num": "APPA",
+      "en": "Opcode Map",
+      "chapter": "app",
+      "page": null
+    },
+    {
+      "id": "appb",
+      "num": "APPB",
+      "en": "Complete Flag Cross-Reference",
+      "chapter": "app",
+      "page": null
+    },
+    {
+      "id": "appc",
+      "num": "APPC",
+      "en": "Status Flag Summary",
+      "chapter": "app",
+      "page": null
+    },
+    {
+      "id": "appd",
+      "num": "APPD",
+      "en": "Condition Codes",
+      "chapter": "app",
+      "page": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+# STD -- Set Direction Flag
+
+```
+Opcode  Instruction   Clocks    Description
+
+FD      STD           2         Set direction flag so (E)SI and/or (E)DI
+                                decrement
+```
+
+## Operation
+
+```
+DF := 1;
+```
+
+## Description
+
+STD sets the direction flag to 1, causing all subsequent string operations to decrement the index registers, (E)SI and/or (E)DI, on which they operate.
+
+## Flags Affected
+
+DF := 1
+
+## Protected Mode Exceptions
+
+None
+
+## Real Address Mode Exceptions
+
+None
+
+## Virtual 8086 Mode Exceptions
+
+None

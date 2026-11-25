@@ -1,0 +1,33 @@
+# STC -- Set Carry Flag
+
+```
+Opcode      Instruction     Clocks      Description
+
+F9          STC             2           Set carry flag
+```
+
+## Operation
+
+```
+CF := 1;
+```
+
+## Description
+
+STC sets the carry flag to 1.
+
+## Flags Affected
+
+CF := 1
+
+## Protected Mode Exceptions
+
+None
+
+## Real Address Mode Exceptions
+
+None
+
+## Virtual 8086 Mode Exceptions
+
+None

@@ -1,0 +1,33 @@
+# LAHF -- Load Flags into AH Register
+
+```
+Opcode  Instruction   Clocks   Description
+
+9F      LAHF          2        Load: AH := flags SF ZF xx AF xx PF xx CF
+```
+
+## Operation
+
+```
+AH := SF:ZF:xx:AF:xx:PF:xx:CF;
+```
+
+## Description
+
+LAHF transfers the low byte of the flags word to AH. The bits, from MSB to LSB, are sign, zero, indeterminate, auxiliary, carry, indeterminate, parity, indeterminate, and carry.
+
+## Flags Affected
+
+None
+
+## Protected Mode Exceptions
+
+None
+
+## Real Address Mode Exceptions
+
+None
+
+## Virtual 8086 Mode Exceptions
+
+None

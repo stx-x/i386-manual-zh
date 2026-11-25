@@ -1,0 +1,33 @@
+# SAHF -- Store AH into Flags
+
+```
+Opcode  Instruction  Clocks   Description
+
+9E      SAHF         3        Store AH into flags SF ZF xx AF xx PF xx CF
+```
+
+## Operation
+
+```
+SF:ZF:xx:AF:xx:PF:xx:CF := AH;
+```
+
+## Description
+
+SAHF loads the flags listed above with values from the AH register, from bits 7, 6, 4, 2, and 0, respectively.
+
+## Flags Affected
+
+SF, ZF, AF, PF, and CF as described above
+
+## Protected Mode Exceptions
+
+None
+
+## Real Address Mode Exceptions
+
+None
+
+## Virtual 8086 Mode Exceptions
+
+None
