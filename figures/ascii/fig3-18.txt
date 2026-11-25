@@ -1,0 +1,15 @@
+                                     · 31          0 ·
+                 D  O                 ║               ║
+(EBPM = EBP      I  F              ┌─ ╠═══════╪═══════╣
+VALUE FOR MAIN)  R                 │  ║    OLD ESP    ║
+                 E  E     DISPLAY ─┤  ╠═══════╪═══════╣◄──EBP FOR
+                 C  X              │  ║      EBPM     ║    MAIN
+                 T  P              ╞═ ╠═══════╪═══════╣
+                 I  A              │  ║               ║
+                 O  N              │  ╠═══════╪═══════╣
+                 N  S     DYNAMIC ─┤  ║               ║
+                    I     STORAGE  │  ╠═══════╪═══════╣
+                  │ O              │  ║               ║
+                  │ N              └─ ╠═══════╪═══════╣◄──ESP
+                  │                   ║               ║
+                  ▼                   ·               ·

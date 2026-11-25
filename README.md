@@ -2,7 +2,7 @@
 
 在线地址：<https://stx-x.github.io/i386-manual-zh/>
 
-《Intel 80386 Programmer's Reference Manual (1986)》的静态中文阅读站。保留原书章节结构、节号、图号与页码，提供全文检索、深浅色、响应式与打印样式。
+《Intel 80386 Programmer's Reference Manual (1986)》的静态中文阅读站。保留原书章节结构、节号、图号与页码；每幅原图下方附有按原布局重绘、图内文字译为中文的矢量图。提供全文检索、深浅色、响应式与打印样式。
 
 ## 快速开始
 

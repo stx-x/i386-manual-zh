@@ -1,0 +1,19 @@
+<svg class="redraw-svg" width="720" height="244" viewBox="0 0 720 244" xmlns="http://www.w3.org/2000/svg" role="img">
+<text x="24" y="30" font-size="15" font-weight="600" fill="currentColor" font-family="sans-serif">用 SAR 模拟 IDIV（N 为 2 的幂）</text>
+<line x1="24" y1="42" x2="696" y2="42" stroke="currentColor" stroke-opacity="0.25"/>
+<text x="24" y="66" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve"></text>
+<text x="32" y="66" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 假设 N 在 ECX 中，被除数在 EAX 中</text>
+<text x="24" y="88" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve">CMP  EAX, 0      </text>
+<text x="152" y="88" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 置符号标志</text>
+<text x="24" y="110" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve">JGE  NoAdjust    </text>
+<text x="152" y="110" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 符号为零则跳转</text>
+<text x="24" y="132" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve">ADD  EAX, ECX    </text>
+<text x="152" y="132" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 加上偏移量</text>
+<text x="24" y="154" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve">DEC  EAX         </text>
+<text x="152" y="154" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; EAX := EAX + (N-1)</text>
+<text x="24" y="176" font-size="12.5" fill="currentColor" font-family="monospace">NoAdjust:</text>
+<text x="24" y="198" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve">SAR  EAX, CL     </text>
+<text x="152" y="198" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 算术右移，完成除法</text>
+<text x="24" y="220" font-size="12.5" fill="currentColor" font-family="monospace" xml:space="preserve"></text>
+<text x="32" y="220" font-size="11.5" fill="currentColor" fill-opacity="0.6" font-family="sans-serif">; 总计约 12 或 18 个时钟</text>
+</svg>

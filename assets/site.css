@@ -584,3 +584,18 @@ dialog.zoom img { display: block; max-width: 88vw; max-height: 82vh; margin: 0 a
   color: var(--muted); padding: 6px;
 }
 .zoom-close:hover { color: var(--ink); }
+
+/* ---------------------------------------------------------------- redrawn figures */
+.fig-redraw { margin: 18px auto 4px; padding-top: 16px; border-top: 1px dashed var(--line); width: 100%; }
+.fig-redraw img {
+  display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--line);
+  border-radius: 4px; background: var(--surface); padding: 10px;
+}
+html[data-theme="dark"] .fig-redraw img { filter: invert(.88) hue-rotate(180deg); }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .fig-redraw img { filter: invert(.88) hue-rotate(180deg); }
+}
+@media print {
+  .fig-redraw { page-break-before: avoid; }
+  .fig-redraw img { filter: none !important; max-height: 11cm; width: auto; max-width: 100%; margin: 0 auto; }
+}

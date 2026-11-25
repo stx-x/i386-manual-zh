@@ -1,0 +1,19 @@
+                            MODE TRANSITION DIAGRAM
+                                 ╔═══════════╗
+                  TASK SWITCH    ║  INITIAL  ║
+                ┌────────────────╢   ENTRY   ║
+                │   OR IRET      ╚═══════════╝
+                │
+                ▼
+        ╔══════════════╗    INTERRUPT, EXCEPTION      ╔═════════════╗
+        ║ 8086 PROGRAM ╟─────────────────────────────►║ V86 MONITOR ║
+        ║  (V86 MODE)  ║◄─────────────────────────────╢ (PROTECTED  ║
+        ╚═══════╤══════╝            IRET              ║    MODE)    ║
+              ▲ │                                     ╚═════╤═══════╝
+              │ │                                           │  ▲
+              │ │                                           │  │
+              │ │                                           │  │
+              │ │TASK SWITCH ╔═══════════════════╗ TASK SWITCH │
+              │ └───────────►║ OTHER 80386 TASKS ║◄─────────┘  │
+              └──────────────╢ (PROTECTED MODE)  ╟─────────────┘
+                 TASK SWITCH ╚═══════════════════╝ TASK SWITCH

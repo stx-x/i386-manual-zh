@@ -1,0 +1,36 @@
+                           WITHOUT PRIVILEGE TRANSITION
+      D  O      31          0                     31          0
+      I  F    ╠═══════╦═══════╣                 ╠═══════╦═══════╣
+      R       ║▒▒▒▒▒▒▒║▒▒▒▒▒▒▒║    OLD          ║▒▒▒▒▒▒▒║▒▒▒▒▒▒▒║    OLD
+      E  E    ╠═══════╬═══════╣   SS:ESP        ╠═══════╬═══════╣   SS:ESP
+      C  X    ║▒▒▒▒▒▒▒║▒▒▒▒▒▒▒║     │           ║▒▒▒▒▒▒▒║▒▒▒▒▒▒▒║     │
+      T  P    ╠═══════╩═══════╣◄────┘           ╠═══════╩═══════╣◄────┘
+      I  A    ║  OLD EFLAGS   ║                 ║  OLD EFLAGS   ║
+      O  N    ╠═══════╦═══════╣                 ╠═══════╦═══════╣
+      N  S    ║▒▒▒▒▒▒▒║OLD CS ║    NEW          ║▒▒▒▒▒▒▒║OLD CS ║
+         I    ╠═══════╩═══════╣   SS:ESP        ╠═══════╩═══════╣
+       │ O    ║    OLD EIP    ║     │           ║    OLD EIP    ║    NEW
+       │ N    ╠═══════════════╣◄────┘           ╠═══════════════╣   SS:ESP
+       │      ║               ║                 ║  ERROR CODE   ║     │
+       ▼      ·               ·                 ╠═══════════════╣◄────┘
+              ·               ·                 ║               ║
+              ·               ·
+              WITHOUT ERROR CODE                 WITH ERROR CODE
+                             WITH PRIVILEGE TRANSITION
+      D  O     31            0                     31          0
+      I  F    ╔═══════╦═══════╗◄────┐           ╔═══════╦═══════╗◄────┐
+      R       ║▒▒▒▒▒▒▒║OLD SS ║     │           ║▒▒▒▒▒▒▒║OLD SS ║     │
+      E  E    ╠═══════╩═══════╣   SS:ESP        ╠═══════╩═══════╣   SS:ESP
+      C  X    ║    OLD ESP    ║  FROM TSS       ║    OLD ESP    ║  FROM TSS
+      T  P    ╠═══════════════╣                 ╠═══════════════╣
+      I  A    ║  OLD EFLAGS   ║                 ║  OLD EFLAGS   ║
+      O  N    ╠═══════╦═══════╣                 ╠═══════╦═══════╣
+      N  S    ║▒▒▒▒▒▒▒║OLD CS ║    NEW          ║▒▒▒▒▒▒▒║OLD CS ║
+         I    ╠═══════╩═══════╣   SS:EIP        ╠═══════╩═══════╣
+       │ O    ║    OLD EIP    ║     │           ║    OLD EIP    ║    NEW
+       │ N    ╠═══════════════╣◄────┘           ╠═══════════════╣   SS:ESP
+       │      ║               ║                 ║  ERROR CODE   ║     │
+       ▼      ·               ·                 ╠═══════════════╣◄────┘
+              ·               ·                 ║               ║
+              ·               ·
+              WITHOUT ERROR CODE                 WITH ERROR CODE

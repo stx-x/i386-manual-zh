@@ -1,0 +1,14 @@
+                               CONTROL REGISTER ZERO
+   31                23                15                  7     4 3   1  0
+  ╔═╤═══════════════╪═════════════════╪═══════════════════╪═════╤═╤═╤═╤═╤═╗
+  ║P│                                                           │E│T│E│M│P║
+  ║ │                            UNDEFINED                      │ │ │ │ │ ║
+  ║G│                                                           │T│S│M│P│E║
+  ╚╤╧═══════════════╪═════════════════╪═══════════════════╪═════╧╤╧╤╧╤╧╤╧╤╝
+   │                                                             │ │ │ │ │
+   └─────────────0 - PAGING DISABLED                             │ │ │ │ │
+                 * - INDICATES PRESENCE OF 80387─────────────────┘ │ │ │ │
+                 0 - NO TASK SWITCH────────────────────────────────┘ │ │ │
+                 0 - DO NOT MONITOR COPROCESSOR──────────────────────┘ │ │
+                 0 - COPROCESSOR NOT PRESENT───────────────────────────┘ │
+                 0 - PROTECTION NOT ENABLED (REAL ADDRESS MODE)──────────┘

@@ -1,0 +1,53 @@
+<svg class="redraw-svg" width="681" height="260" viewBox="0 0 681 260" xmlns="http://www.w3.org/2000/svg" role="img">
+<g class="rd-lines" fill="none" stroke="currentColor" stroke-linecap="square">
+<line x1="273.0" y1="68.0" x2="277.5" y2="68.0" stroke-width="1.1"/>
+<line x1="277.5" y1="68.0" x2="282.0" y2="68.0" stroke-width="1.1"/>
+<line x1="282.0" y1="68.0" x2="286.5" y2="68.0" stroke-width="1.1"/>
+<line x1="286.5" y1="68.0" x2="291.0" y2="68.0" stroke-width="1.1"/>
+<line x1="606.0" y1="68.0" x2="610.5" y2="68.0" stroke-width="1.1"/>
+<line x1="610.5" y1="68.0" x2="615.0" y2="68.0" stroke-width="1.1"/>
+<line x1="615.0" y1="68.0" x2="619.5" y2="68.0" stroke-width="1.1"/>
+<line x1="619.5" y1="68.0" x2="624.0" y2="68.0" stroke-width="1.1"/>
+<line x1="273.0" y1="100.0" x2="277.5" y2="100.0" stroke-width="1.1"/>
+<line x1="277.5" y1="100.0" x2="282.0" y2="100.0" stroke-width="1.1"/>
+<line x1="282.0" y1="100.0" x2="286.5" y2="100.0" stroke-width="1.1"/>
+<line x1="286.5" y1="100.0" x2="291.0" y2="100.0" stroke-width="1.1"/>
+<line x1="606.0" y1="100.0" x2="610.5" y2="100.0" stroke-width="1.1"/>
+<line x1="610.5" y1="100.0" x2="615.0" y2="100.0" stroke-width="1.1"/>
+<line x1="615.0" y1="100.0" x2="619.5" y2="100.0" stroke-width="1.1"/>
+<line x1="619.5" y1="100.0" x2="624.0" y2="100.0" stroke-width="1.1"/>
+</g>
+<g class="rd-shade">
+</g>
+<g class="rd-marks" fill="currentColor">
+<polygon points="270.5,64.0 264.5,68.0 270.5,72.0"/>
+<polygon points="603.5,64.0 597.5,68.0 603.5,72.0"/>
+<polygon points="270.5,96.0 264.5,100.0 270.5,104.0"/>
+<polygon points="603.5,96.0 597.5,100.0 603.5,104.0"/>
+</g>
+<g class="rd-text">
+<text x="210.0" y="23.5" text-anchor="middle" font-size="12">OF</text>
+<text x="255.0" y="23.5" text-anchor="middle" font-size="12">CF</text>
+<text x="439.5" y="23.5" text-anchor="middle" font-size="12">操作数</text>
+<text x="120.0" y="39.5" text-anchor="middle" font-size="12">之前 SHL</text>
+<text x="444.0" y="39.5" text-anchor="middle" font-size="12">10001000100010001000100010001111</text>
+<text x="102.0" y="55.5" text-anchor="middle" font-size="12">或 SAL</text>
+<text x="115.5" y="71.5" text-anchor="middle" font-size="12">之后 SHL</text>
+<text x="205.5" y="71.5" text-anchor="middle" font-size="8.280000000000001">1</text>
+<text x="250.5" y="71.5" text-anchor="middle" font-size="8.280000000000001">1</text>
+<text x="444.0" y="71.5" text-anchor="middle" font-size="12">00010001000100010001000100011110</text>
+<text x="637.5" y="71.5" text-anchor="middle" font-size="8.280000000000001">0</text>
+<text x="124.5" y="87.5" text-anchor="middle" font-size="12">或 SAL 由 1</text>
+<text x="115.5" y="103.5" text-anchor="middle" font-size="12">之后 SHL</text>
+<text x="250.5" y="103.5" text-anchor="middle" font-size="8.280000000000001">0</text>
+<text x="444.0" y="103.5" text-anchor="middle" font-size="12">00100010001000100011110000000000</text>
+<text x="637.5" y="103.5" text-anchor="middle" font-size="8.280000000000001">0</text>
+<text x="129.0" y="119.5" text-anchor="middle" font-size="12">或 SAL 由 10</text>
+</g>
+<g class="rd-text rd-vertical">
+</g>
+<g class="rd-note" font-size="11">
+<text x="12" y="222" fill="currentColor">SHL（同义助记符 SAL）把寄存器或内存操作数中的位左移指定的位数。CF 接收从</text>
+<text x="12" y="240" fill="currentColor">操作数左端移出的最后一位；空出的低位补 0。这些指令可作用于字节、字和双字。</text>
+</g>
+</svg>

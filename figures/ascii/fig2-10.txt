@@ -1,0 +1,12 @@
+      SEGMENT +    BASE   +    (INDEX * SCALE)  +     DISPLACEMENT
+                 ┌     ┐
+                 │ --- │     ┌     ┐     ┌   ┐
+      ┌    ┐     │ EAX │     │ EAX │     │ 1 │
+      │ CS │     │ ECX │     │ ECX │     │   │     ┌                     ┐
+      │ SS │     │ EDX │     │ EDX │     │ 2 │     │     NO DISPLACEMENT │
+     ─┤ DS ├─ + ─┤ EBX ├─ + ─┤ EBX ├─ * ─┤   ├─ + ─┤  8-BIT DISPLACEMENT ├─
+      │ ES │     │ ESP │     │ --- │     │ 4 │     │ 32-BIT DISPLACEMENT │
+      │ FS │     │ EBP │     │ EBP │     │   │     └                     ┘
+      │ GS │     │ ESI │     │ ESI │     │ 6 │
+      └    ┘     │ EDI │     │ EDI │     └   ┘
+                 └     ┘     └     ┘

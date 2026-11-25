@@ -1,0 +1,33 @@
+                  MEMORY
+       BYTE       VALUES        (All values in hexadecimal)
+     ADDRESS   ╔══════════╗
+              E║          ║
+               ╠══════════╣──┐
+              D║    7A    ║  ├─ DOUBLE WORD AT ADDRESS A
+               ╠══════════╣─┐│  CONTAINS 7AFE0636
+              C║    FE    ║ ││
+               ╠══════════╣ ├─ WORD AT ADDRESS B
+              B║    06    ║ ││ CONTAINS FE06
+               ╠══════════╣─┘│
+              A║    36    ║  │
+               ╠══════════╣══╡
+              9║    1F    ║  ├─ WORD AT ADDRESS 9
+               ╠══════════╣──┘  CONTAINS IF
+              8║          ║
+               ╠══════════╣──┐
+              7║    23    ║  │
+               ╠══════════╣  ├─ WORD AT ADDRESS 6
+              6║    OB    ║  │  CONTAINS 23OB
+               ╠══════════╣──┘
+              5║          ║
+               ╠══════════╣
+              4║          ║
+               ╠══════════╣──┐
+              3║    74    ║  │
+               ╠══════════╣─┐├─ WORD AT ADDRESS 2
+              2║    CB    ║ ││  CONTAINS 74CB
+               ╠══════════╣──┘
+              1║    31    ║ ├── WORD AT ADDRESS 1
+               ╠══════════╣─┘   CONTAINS CB31
+              0║          ║
+               ╚══════════╝

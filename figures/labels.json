@@ -1,0 +1,16 @@
+{
+  "OFFSET": "偏移",
+  "SEGMENT": "段",
+  "OPERAND": "操作数",
+  "SELECTED SEGMENT": "选中的段",
+  "+": "+",
+  "PAGE": "页",
+  "DIRECTORY": "目录",
+  "TABLE": "表",
+  "ENTRY": "项",
+  "FRAME": "框",
+  "PHYSICAL ADDRESS": "物理地址",
+  "CR3": "CR3",
+  "DIR": "DIR",
+  "PG TBL ENTRY": "页表项"
+}

@@ -1,0 +1,9 @@
+    ; assuming N is in ECX, and the dividend is in EAX
+    ;                                               CLOCKS
+    CMP     EAX, 0      ; to set sign flag          2
+    JGE     NoAdjust    ; jump if sign is zero      3 or 9
+    ADD     EAX, ECX    ;                           2
+    DEC     EAX         ; EAX := EAX + (N-1)        2
+NoAdjust:
+    SAR     EAX, CL     ;                           3
+    ;                       TOTAL CLOCKS           12 or 18]

@@ -1,0 +1,17 @@
+<svg class="redraw-svg" width="720" height="354" viewBox="0 0 720 354" xmlns="http://www.w3.org/2000/svg" role="img">
+<text x="24" y="30" font-size="15" font-weight="600" fill="currentColor" font-family="sans-serif">ENTER 指令的形式化定义</text>
+<line x1="24" y1="42" x2="696" y2="42" stroke="currentColor" stroke-opacity="0.25"/>
+<text x="24" y="66" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">LEVEL 表示第二个操作数的值。</text>
+<text x="24" y="88" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve"></text>
+<text x="24" y="110" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">压入 EBP</text>
+<text x="24" y="132" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">FRAME_PTR := ESP</text>
+<text x="24" y="154" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">若 LEVEL &gt; 0：</text>
+<text x="24" y="176" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">    重复 (LEVEL−1) 次：</text>
+<text x="24" y="198" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">        EBP := EBP − 4</text>
+<text x="24" y="220" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">        压入 EBP 所指的双字</text>
+<text x="24" y="242" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">    结束重复</text>
+<text x="24" y="264" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">    压入 FRAME_PTR</text>
+<text x="24" y="286" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">结束若</text>
+<text x="24" y="308" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">EBP := FRAME_PTR</text>
+<text x="24" y="330" font-size="13" fill="currentColor" font-family="sans-serif" xml:space="preserve">ESP := ESP − 第一个操作数</text>
+</svg>

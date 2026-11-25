@@ -1,0 +1,8 @@
+                         15                      4 3   0
+                        ╔═════════════════════════╤═╤═══╗
+                        ║                         │T│   ║
+                        ║           INDEX         │ │RPL║
+                        ║                         │I│   ║
+                        ╚═════════════════════════╧═╧═══╝
+                         TI  - TABLE INDICATOR
+                         RPL - REQUESTOR'S PRIVILEGE LEVEL

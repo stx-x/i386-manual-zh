@@ -1,0 +1,8 @@
+                     7    6    5    4    3    2    1    0
+                   ╔════╦════╦════╦════╦════╦════╦════╦════╗
+                   ║ SF ║ ZF ║ UU ║ AF ║ UU ║ PF ║ UU ║ CF ║
+                   ╚════╩════╩════╩════╩════╩════╩════╩════╝
+     LAHF LOADS FIVE FLAGS FROM THE FLAG REGISTER INTO REGISTER AH. SAHF
+     STORES THESE SAME FIVE FLAGS FROM AH INTO THE FLAG REGISTER. THE BIT
+     POSITION OF EACH FLAG IS THE SAME IN AH AS IT IS IN THE FLAG REGISTER.
+     THE REMAINING BITS (MARKED UU) ARE RESERVED; DO NOT DEFINE.
