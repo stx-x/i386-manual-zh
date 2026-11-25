@@ -220,31 +220,54 @@ def render_markdown(src, heading_ids=None, id_prefix="", heading_offset=0):
             items = []
             while i < len(lines):
                 m2 = re.match(r"^(\s*)([-*]|\d+\.)\s+(.*)$", lines[i])
-                if not m2 or len(m2.group(1)) < base_indent:
+                if m2 and len(m2.group(1)) < base_indent:
+                    break
+                if not m2:
+                    # continuation line of the current item
+                    if lines[i].strip() and lines[i].startswith(" " * (base_indent + 2)) \
+                            and not lines[i].startswith(("#", "```", "|", ">", ":::")):
+                        if items:
+                            items[-1]["extra"].append(lines[i].strip())
+                        i += 1
+                        continue
                     break
                 indent = len(m2.group(1))
                 if indent > base_indent:
-                    # nested line: append to previous item
                     if items:
-                        items[-1][1].append(lines[i].strip())
+                        items[-1]["children"].append(
+                            {"indent": indent, "ordered": m2.group(2)[0].isdigit(), "text": m2.group(3)}
+                        )
                     i += 1
                     continue
-                if m2.group(2)[0].isdigit() != ordered and indent == base_indent:
+                if m2.group(2)[0].isdigit() != ordered:
                     break
-                items.append([m2.group(3), []])
+                items.append({"text": m2.group(3), "extra": [], "children": []})
                 i += 1
-                while i < len(lines) and lines[i].strip() and not re.match(r"^(\s*)([-*]|\d+\.)\s+", lines[i]) and not lines[i].startswith(("#", "```", "|", ">", ":::")):
-                    if lines[i].startswith("  "):
-                        items[-1][1].append(lines[i].strip())
-                        i += 1
-                    else:
-                        break
+
+            def render_children(children):
+                html = []
+                k = 0
+                while k < len(children):
+                    grp = [children[k]]
+                    k += 1
+                    while k < len(children) and children[k]["indent"] == grp[0]["indent"]:
+                        grp.append(children[k])
+                        k += 1
+                    ctag = "ol" if grp[0]["ordered"] else "ul"
+                    html.append(f'<{ctag} class="sub-list">')
+                    for c in grp:
+                        html.append(f"<li>{inline(c['text'])}</li>")
+                    html.append(f"</{ctag}>")
+                return "".join(html)
+
             tag = "ol" if ordered else "ul"
             out.append(f"<{tag}>")
-            for text, extra in items:
-                body = inline(text)
-                if extra:
-                    body += "<br>" + " ".join(inline(x) for x in extra)
+            for it in items:
+                body = inline(it["text"])
+                if it["extra"]:
+                    body += "<br>" + " ".join(inline(x) for x in it["extra"])
+                if it["children"]:
+                    body += render_children(it["children"])
                 out.append(f"<li>{body}</li>")
             out.append(f"</{tag}>")
             continue

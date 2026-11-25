@@ -263,9 +263,10 @@ h2 {
 h2 .h-num { font-family: var(--mono); font-size: .55em; font-weight: 400; color: var(--accent); letter-spacing: 0; flex: none; padding-top: .2em; margin-right: .55em; }
 h3 { font-size: 1.16em; font-weight: 650; margin: 2em 0 .6em; letter-spacing: 0; display: flex; align-items: baseline; }
 h3 .h-num { font-family: var(--mono); font-size: .78em; font-weight: 400; color: var(--accent); margin-right: .55em; flex: none; }
-h4 { font-size: 1em; font-weight: 650; margin: 1.6em 0 .5em; color: var(--ink-2); }
+h4 { font-size: 1em; font-weight: 650; margin: 1.6em 0 .5em; color: var(--ink-2); display: flex; align-items: baseline; }
+h4 .h-num { font-family: var(--mono); font-size: .85em; font-weight: 400; color: var(--accent); margin-right: .55em; flex: none; }
 .h-anchor { opacity: 0; font-family: var(--mono); font-size: .7em; color: var(--faint); margin-left: .4em; transition: opacity .15s; }
-h2:hover .h-anchor, h3:hover .h-anchor { opacity: 1; }
+h2:hover .h-anchor, h3:hover .h-anchor, h4:hover .h-anchor { opacity: 1; }
 
 p { margin: 0 0 1.05em; text-align: justify; text-justify: inter-ideograph; }
 p + p { text-indent: 0; }
@@ -282,6 +283,10 @@ sup { font-size: .7em; line-height: 0; }
 
 ul, ol { margin: 0 0 1.2em; padding-left: 1.5em; }
 li { margin: 0 0 .45em; padding-left: .2em; }
+ul.sub-list, ol.sub-list { margin: .5em 0 .6em; padding-left: 1.35em; }
+ul.sub-list li, ol.sub-list li { margin-bottom: .3em; }
+ul.sub-list li::marker { color: var(--faint); }
+ul.sub-list > li { font-size: .97em; color: var(--ink-2); }
 li::marker { color: var(--faint); font-family: var(--mono); font-size: .85em; }
 ul li::marker { color: var(--accent); }
 
@@ -298,9 +303,9 @@ blockquote p:last-child { margin-bottom: 0; }
 }
 .fig { margin: 2.2em 0; text-align: center; }
 .fig-link { display: inline-block; max-width: 100%; border: 1px solid var(--line); background: var(--surface); padding: 10px; border-radius: 3px; cursor: zoom-in; }
-html[data-theme="dark"] .fig-link, html[data-theme="dark"] .fig img { filter: invert(.9) hue-rotate(180deg); }
+html[data-theme="dark"] .fig-link img { filter: invert(.9) hue-rotate(180deg); }
 @media (prefers-color-scheme: dark) {
-  html[data-theme="auto"] .fig-link, html[data-theme="auto"] .fig img { filter: invert(.9) hue-rotate(180deg); }
+  html[data-theme="auto"] .fig-link img { filter: invert(.9) hue-rotate(180deg); }
 }
 .fig img { display: block; image-rendering: -webkit-optimize-contrast; }
 .fig figcaption { margin-top: 10px; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
@@ -553,6 +558,9 @@ tbody tr:hover { background: color-mix(in srgb, var(--paper-2) 55%, transparent)
   h3 { page-break-after: avoid; font-size: 11.5pt; }
   p { orphans: 3; widows: 3; text-align: justify; }
   .fig { page-break-inside: avoid; }
+  .table-wrap { page-break-inside: avoid; }
+  table { page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
   .fig img { max-height: 9cm; width: auto; filter: none !important; }
   .fig-link { border: 0; padding: 0; }
   .code-block { page-break-inside: avoid; background: #f6f6f6; }
@@ -586,14 +594,24 @@ dialog.zoom img { display: block; max-width: 88vw; max-height: 82vh; margin: 0 a
 .zoom-close:hover { color: var(--ink); }
 
 /* ---------------------------------------------------------------- redrawn figures */
-.fig-redraw { margin: 18px auto 4px; padding-top: 16px; border-top: 1px dashed var(--line); width: 100%; }
-.fig-redraw img {
-  display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--line);
-  border-radius: 4px; background: var(--surface); padding: 10px;
+.fig-redraw {
+  margin: 18px auto 6px; padding: 14px 4px 6px; width: 100%;
+  border-top: 1px dashed var(--line);
 }
-html[data-theme="dark"] .fig-redraw img { filter: invert(.88) hue-rotate(180deg); }
+.fig-redraw::before {
+  content: "中文重绘";
+  display: block; margin: 0 0 10px; text-align: center;
+  font-family: var(--sans); font-size: 10px; letter-spacing: .3em;
+  text-indent: .3em; color: var(--muted);
+}
+.fig-redraw img {
+  display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto;
+  /* the SVG draws with currentColor (= black), so it inherits the page theme
+     by inversion instead of carrying its own background */
+}
+html[data-theme="dark"] .fig-redraw img { filter: invert(1); }
 @media (prefers-color-scheme: dark) {
-  html[data-theme="auto"] .fig-redraw img { filter: invert(.88) hue-rotate(180deg); }
+  html[data-theme="auto"] .fig-redraw img { filter: invert(1); }
 }
 @media print {
   .fig-redraw { page-break-before: avoid; }
