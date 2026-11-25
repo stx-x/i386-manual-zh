@@ -24,20 +24,22 @@ Opcode       Instruction    Clocks    Description
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #GP(0) if the current privilege level is not 0; #GP(selector) if the object named by the source selector is not a TSS or is already busy; #NP(selector) if the TSS is marked "not present"; #PF(fault-code) for a page fault
-:::
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #GP(0)：当前特权级不为 0。
+- #GP(selector)：源选择子所指对象不是 TSS，或已处于忙状态。
+- #NP(selector)：TSS 被标记为“不存在”。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 6; LTR is not recognized in Real Address Mode
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 6；实地址模式不识别 LTR。
 
-::: note
-Same exceptions as in Real Address Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同。
+

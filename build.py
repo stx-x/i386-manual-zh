@@ -513,7 +513,7 @@ def build_chapter(num, secs, sections_by_ch):
         rendered_sec = rendered_sec.replace('src="fig', 'src="../assets/figures/fig').replace('href="fig', 'href="../assets/figures/fig')
         body.append(rendered_sec)
         if s.get("page"):
-            body.append(f'<p class="sec-source">原书 p. {esc(s["page"])} · <a href="https://pdos.csail.mit.edu/6.828/2018/readings/i386/{sid}.htm" target="_blank" rel="noopener">英文原文</a></p>')
+            body.append(f'<p class="sec-source">原书 p. {esc(s["page"])}</p>')
         body.append("</section>")
     body.append("</div>")
     # prev / next
@@ -583,7 +583,7 @@ def build_index(sections_by_ch):
 </section>
 <section class="intro-grid">
   <div><h2>为什么读这本</h2><p>这是 Intel 官方在 1986 年给出的 80386 体系结构定义。今天所有 x86-64 处理器仍然从复位那一刻起兼容它：实模式、段描述符、页表、IDT、任务切换。读懂这本，再读现代内核代码，很多“历史包袱”会变成清晰的设计决策。</p></div>
-  <div><h2>怎么读</h2><p>应用程序员从第 2、3 章开始；系统程序员按第 4→6→9→10 章顺序推进；第 17 章与附录作为案头速查。每节末尾给出原书页码与英文原文链接，可直接对照。</p></div>
+  <div><h2>怎么读</h2><p>应用程序员从第 2、3 章开始；系统程序员按第 4→6→9→10 章顺序推进；第 17 章与附录作为案头速查。每节末尾标注原书页码，便于核查。</p></div>
 </section>
 <section class="toc-full">
   <div class="section-head"><p class="eyebrow">CONTENTS</p><h2>全书目录</h2></div>

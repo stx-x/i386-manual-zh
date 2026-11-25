@@ -41,20 +41,21 @@ FI;
 
 OF、SF、ZF、AF、PF、CF 均未定义。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-Interrupt 0 if the quotient is too large to fit in the designated register (AL or AX), or if the divisor is 0; #GP (0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
-:::
+- 中断 0：商超出指定寄存器（AL 或 AX）的表示范围，或除数为 0。
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 0 if the quotient is too large to fit in the designated register (AL or AX), or if the divisor is 0; Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+- 中断 0：商超出指定寄存器（AL 或 AX）的表示范围，或除数为 0。
+- 中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
 
-::: note
-Same exceptions as in Real Address Mode; #PF(fault-code) for a page fault
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

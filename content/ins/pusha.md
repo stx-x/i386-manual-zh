@@ -53,20 +53,18 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if the starting or ending stack address is outside the stack segment limit; #PF(fault-code) for a page fault
-:::
+#SS(0)：栈的起始或结束地址超出栈段界限；#PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Before executing PUSHA or PUSHAD, the 80386 shuts down if SP or ESP equals 1, 3, or 5; if SP or ESP equals 7, 9, 11, 13, or 15, exception 13 occurs
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+- 执行 PUSHA 或 PUSHAD 之前，若 SP 或 ESP 等于 1、3 或 5，80386 将关机。
+- 若 SP 或 ESP 等于 7、9、11、13 或 15，产生异常 13。
 
-::: note
-Same exceptions as in real-address mode; #PF(fault-code) for a page fault
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

@@ -31,20 +31,17 @@ IF := 1
 
 IF := 1。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is greater (has less privilege) than the I/O privilege level
-:::
+#GP(0)：当前特权级高于（即特权低于）I/O 特权级。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-None
-:::
+
+## 虚拟 8086 模式异常
+
+无。
+

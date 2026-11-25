@@ -33,20 +33,17 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if the new value of eSP is outside the stack segment boundaries
-:::
+#SS(0)：eSP 的新值超出栈段边界。
 
-## 实地址模式异常（原文）
 
-::: note
-None; the 80386 shuts down due to a lack of stack space
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无；80386 因栈空间不足而关机。
 
-::: note
-#GP(0) fault if IOPL is less than 3, to permit emulation
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：IOPL 小于 3，以便进行模拟。
+

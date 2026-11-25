@@ -57,20 +57,17 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if SP or ESP would exceed the stack limit at any point during instruction execution; #PF(fault-code) for a page fault
-:::
+#SS(0)：指令执行期间 SP 或 ESP 在任何时刻超出栈界限；#PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-None
-:::
+
+## 虚拟 8086 模式异常
+
+无。
+

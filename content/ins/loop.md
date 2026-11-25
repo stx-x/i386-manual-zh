@@ -53,20 +53,17 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the offset jumped to is beyond the limits of the current code segment
-:::
+#GP(0)：跳转目标的偏移超出当前代码段界限。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-None
-:::
+
+## 虚拟 8086 模式异常
+
+无。
+

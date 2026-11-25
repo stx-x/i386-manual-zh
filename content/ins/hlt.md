@@ -24,20 +24,17 @@ F4          HLT                5          Halt
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-HLT is a privileged instruction; #GP(0) if the current privilege level is not 0
-:::
+HLT 是特权指令；#GP(0)：当前特权级不为 0。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-#GP(0); HLT is a privileged instruction
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)；HLT 是特权指令。
+

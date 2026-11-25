@@ -24,20 +24,17 @@ Opcode  Instruction   Clocks    Description
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-None
-:::
+无。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-None
-:::
+
+## 虚拟 8086 模式异常
+
+无。
+

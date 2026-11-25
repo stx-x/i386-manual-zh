@@ -31,20 +31,19 @@ Opcode       Instruction      Clocks      Description
 
 ZF，如上述。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
-:::
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 6; LSL is not recognized in Real Address Mode
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 6；实地址模式不识别 LSL。
 
-::: note
-Same exceptions as in Real Address Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同。
+

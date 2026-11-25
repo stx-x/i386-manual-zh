@@ -44,20 +44,17 @@ DEST := SRC;
 
 OF、SF、ZF、AF、PF、CF 均未定义。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is not 0
-:::
+#GP(0)：当前特权级不为 0。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-#GP(0) if instruction execution is attempted
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：试图执行该指令。
+

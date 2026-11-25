@@ -42,20 +42,17 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if BP does not point to a location within the limits of the current stack segment
-:::
+#SS(0)：BP 未指向当前栈段界限内的位置。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
 
-::: note
-Same exceptions as in Real Address Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同。
+

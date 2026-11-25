@@ -41,24 +41,23 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is not 0; #UD if the source operand is a register; #GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
-:::
+- #GP(0)：当前特权级不为 0。
+- #UD：源操作数为寄存器。
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH; Interrupt 6 if the source operand is a register
+## 实地址模式异常
 
-### Note
+中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间；中断 6：源操作数为寄存器。
 
-These instructions are valid in Real Address Mode to allow power-up initialization for Protected Mode
-:::
+这些指令在实地址模式中有效，以便上电时为保护模式做初始化。
 
-## 虚拟 8086 模式异常（原文）
 
-::: note
-Same exceptions as in Real Address Mode; #PF(fault-code) for a page fault
-:::
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

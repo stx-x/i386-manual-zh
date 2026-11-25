@@ -31,20 +31,17 @@ CF      IRETD        ts           Interrupt return, different task (NT = 1)
 
 全部；标志寄存器从栈中弹出。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP, #NP, or #SS, as indicated under "
-:::
+#GP、#NP 或 #SS：条件见上文。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 13 if any part of the operand being popped lies beyond address 0FFFFH
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 13：被弹出的操作数有任何部分超出地址 0FFFFH。
 
-::: note
-#GP(0) fault if IOPL is less than 3, to permit emulation
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：IOPL 小于 3，以便进行模拟。
+

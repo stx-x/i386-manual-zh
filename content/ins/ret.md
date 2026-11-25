@@ -34,20 +34,17 @@ CA  iw     RET imm16    pm=68          Return (far), lesser privilege, pop
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP, #NP, or #SS, as described under "
-:::
+#GP、#NP 或 #SS：条件见上文。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 13 if any part of the operand would be outside the effective address space from 0 to 0FFFFH
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
 
-::: note
-Same exceptions as in Real Address Mode; #PF(fault-code) for a page fault
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

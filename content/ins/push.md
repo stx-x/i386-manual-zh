@@ -60,20 +60,20 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if the new value of SP or ESP is outside the stack segment limit; #GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
-:::
+- #SS(0)：SP 或 ESP 的新值超出栈段界限。
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-None; if SP or ESP is 1, the 80386 shuts down due to a lack of stack space
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无；若 SP 或 ESP 为 1，80386 因栈空间不足而关机。
 
-::: note
-Same exceptions as in real-address mode; #PF(fault-code) for a page fault
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

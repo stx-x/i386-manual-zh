@@ -49,20 +49,17 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#UD if the second operand is a register
-:::
+#UD：第二操作数为寄存器。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 6 if the second operand is a register
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 6：第二操作数为寄存器。
 
-::: note
-Same exceptions as in Real Address Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同。
+

@@ -36,22 +36,23 @@ FI;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-Interrupt 5 if the bounds test fails, as described above; #GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
+- 中断 5：界限检查失败，如上文所述。
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
+- 第二操作数必须是内存操作数，不能是寄存器。若执行 BOUND 时 ModR/M 字节把第二操作数表示为寄存器，产生 #UD。
 
-The second operand must be a memory operand, not a register. If BOUND is executed with a ModRM byte representing a register as the second operand, #UD occurs.
-:::
 
-## 实地址模式异常（原文）
+## 实地址模式异常
 
-::: note
-Interrupt 5 if the bounds test fails; Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH; Interrupt 6 if the second operand is a register
-:::
+- 中断 5：界限检查失败。
+- 中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
+- 中断 6：第二操作数为寄存器。
 
-## 虚拟 8086 模式异常（原文）
 
-::: note
-Same exceptions as in Real Address Mode; #PF(fault-code) for a page fault
-:::
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

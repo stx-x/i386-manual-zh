@@ -30,20 +30,17 @@ IF := 0;
 
 IF := 0。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is greater (has less privilege) than the IOPL in the flags register. IOPL specifies the least privileged level at which I/O can be performed.
-:::
+#GP(0)：当前特权级高于（即特权低于）标志寄存器中的 IOPL。IOPL 规定可以执行 I/O 的最低特权级。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-#GP(0) as for Protected Mode
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：与保护模式相同。
+

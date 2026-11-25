@@ -24,20 +24,18 @@ Opcode   Instruction   Clocks     Description
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#NM if the task-switched flag in the machine status word (the lower 16 bits of register CR0) is set; #MF if the ERROR# input pin is asserted (i.e., the 80287 has detected an unmasked numeric error)
-:::
+- #NM：机器状态字（CR0 的低 16 位）中的任务已切换标志已置位。
+- #MF：ERROR# 输入引脚有效，即 80287 检测到未屏蔽的数值错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Same exceptions as in Protected Mode
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+与保护模式相同。
 
-::: note
-Same exceptions as in Protected Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与保护模式相同。
+

@@ -30,24 +30,24 @@ LDTR := SRC;
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is not 0; #GP(selector) if the selector operand does not point into the Global Descriptor Table, or if the entry in the GDT is not a Local Descriptor Table; #NP(selector) if the LDT descriptor is not present; #GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #PF(fault-code) for a page fault
-:::
+- #GP(0)：当前特权级不为 0。
+- #GP(selector)：选择子操作数未指向全局描述符表，或 GDT 中的表项不是局部描述符表。
+- #NP(selector)：LDT 描述符不存在。
+- #GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #PF(fault-code)：页错误。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 6; LLDT is not recognized in Real Address Mode
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 6；实地址模式不识别 LLDT。
 
-::: note
-Same exceptions as in Real Address Mode (because the instruction is not recognized, it will not execute or perform a memory reference)
 
-### Note
+## 虚拟 8086 模式异常
 
-The operand-size attribute has no effect on this instruction.
-:::
+与实地址模式相同（指令不被识别，因此不会执行，也不会访问内存）。
+
+操作数大小属性对该指令没有影响。
+

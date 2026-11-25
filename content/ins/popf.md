@@ -24,20 +24,17 @@ Opcode   Instruction   Clocks   Description
 
 除 VM 和 RF 之外的所有标志。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#SS(0) if the top of stack is not within the stack segment
-:::
+#SS(0)：栈顶不在栈段内。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
 
-::: note
-#GP(0) fault if IOPL is less than 3, to permit emulation
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：IOPL 小于 3，以便进行模拟。
+

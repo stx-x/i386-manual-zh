@@ -271,22 +271,23 @@ TASK-STATE-SEGMENT:
 
 若发生任务切换则影响所有标志；若不发生任务切换则不影响任何标志。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-For far calls: #GP, #NP, #SS, and #TS, as indicated in the list above
+- 远调用：#GP、#NP、#SS 和 #TS，条件见上表。
+- 近直接调用：若过程位置超出代码段界限，产生 #GP(0)。
+- #SS(0)：压入返回地址时超出栈段界限。
+- #PF(fault-code)：页错误。近间接调用：#GP(0)：CS、DS、ES、FS 或 GS 段中的内存操作数有效地址非法。
+- #SS(0)：SS 段中的地址非法。
+- #GP(0)：取得的间接偏移超出代码段界限。
+- #PF(fault-code)：页错误。
 
-For near direct calls: #GP(0) if procedure location is beyond the code segment limits; #SS(0) if pushing the return address exceeds the bounds of the stack segment; #PF (fault-code) for a page fault For a near indirect call: #GP(0) for an illegal memory operand effective address in the CS, DS, ES, FS, or GS segments; #SS(0) for an illegal address in the SS segment; #GP(0) if the indirect offset obtained is beyond the code segment limits; #PF(fault-code) for a page fault
-:::
 
-## 实地址模式异常（原文）
+## 实地址模式异常
 
-::: note
-Interrupt 13 if any part of the operand would lie outside of the effective address space from 0 to 0FFFFH
-:::
+中断 13：操作数的任何部分超出 0–0FFFFH 的有效地址空间。
 
-## 虚拟 8086 模式异常（原文）
 
-::: note
-Same exceptions as in Real Address Mode; #PF(fault-code) for a page fault
-:::
+## 虚拟 8086 模式异常
+
+与实地址模式相同；#PF(fault-code)：页错误。
+

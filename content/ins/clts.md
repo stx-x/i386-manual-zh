@@ -30,20 +30,17 @@ TS Flag in CR0 := 0;
 
 TS := 0（TS 在 CR0 中，不在标志寄存器中）。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if CLTS is executed with a current privilege level other than 0
-:::
+#GP(0)：当前特权级不为 0 时执行 CLTS。
 
-## 实地址模式异常（原文）
 
-::: note
-None (valid in Real Address Mode to allow initialization for Protected Mode)
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无（在实地址模式中有效，以便为保护模式做初始化）。
 
-::: note
-Same exceptions as in Real Address Mode
-:::
+
+## 虚拟 8086 模式异常
+
+与实地址模式相同。
+

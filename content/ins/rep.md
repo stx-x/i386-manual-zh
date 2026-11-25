@@ -119,20 +119,17 @@ OD;
 
 ZF 由 REP CMPS 与 REP SCAS 按上述方式设置。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#UD if a repeat prefix is used before an instruction that is not in the list above; further exceptions can be generated when the string operation is executed; refer to the descriptions of the string instructions themselves
-:::
+#UD：在上文列表之外的指令前使用了重复前缀；执行串操作时还可能产生其他异常；参见各串指令自身的说明。
 
-## 实地址模式异常（原文）
 
-::: note
-Interrupt 6 if a repeat prefix is used before an instruction that is not in the list above; further exceptions can be generated when the string operation is executed; refer to the descriptions of the string instructions themselves
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+中断 6：在上文列表之外的指令前使用了重复前缀；执行串操作时还可能产生其他异常；参见各串指令自身的说明。
 
-::: note
-#UD if a repeat prefix is used before an instruction that is not in the list above; further exceptions can be generated when the string operation is executed; refer to the descriptions of the string instructions themselves
-:::
+
+## 虚拟 8086 模式异常
+
+#UD：在上文列表之外的指令前使用了重复前缀；执行串操作时还可能产生其他异常；参见各串指令自身的说明。
+

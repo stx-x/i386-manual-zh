@@ -45,20 +45,17 @@ DEST := [SRC]; (* Reads from I/O address space *)
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP(0) if the current privilege level is larger (has less privilege) than IOPL and any of the corresponding I/O permission bits in TSS equals 1
-:::
+#GP(0)：当前特权级高于（即特权低于）IOPL，且 TSS 中相应的 I/O 许可位为 1。
 
-## 实地址模式异常（原文）
 
-::: note
-None
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无。
 
-::: note
-#GP(0) fault if any of the corresponding I/O permission bits in TSS equals 1
-:::
+
+## 虚拟 8086 模式异常
+
+#GP(0)：TSS 中相应的 I/O 许可位为 1。
+

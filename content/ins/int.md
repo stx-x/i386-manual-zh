@@ -48,20 +48,19 @@ INT n 产生软件中断 n；INTO 在 OF 置位时产生中断 4。二者都通�
 
 无。
 
-## 保护模式异常（原文）
+## 保护模式异常
 
-::: note
-#GP, #NP, #SS, and #TS as indicated under "
-:::
+#GP、#NP、#SS 和 #TS：条件见上文。
 
-## 实地址模式异常（原文）
 
-::: note
-None; if the SP or ESP = 1, 3, or 5 before executing INT or INTO, the 80386 will shut down due to insufficient stack space
-:::
+## 实地址模式异常
 
-## 虚拟 8086 模式异常（原文）
+无；执行 INT 或 INTO 之前，若 SP 或 ESP 为 1、3 或 5，80386 会因栈空间不足而关机。
 
-::: note
-#GP(0) fault if IOPL is less than 3, for INT only, to permit emulation; Interrupt 3 (0CCH) generates Interrupt 3; INTO generates Interrupt 4 if the overflow flag equals 1
-:::
+
+## 虚拟 8086 模式异常
+
+- #GP(0)：仅对 INT 而言，IOPL 小于 3，以便进行模拟。
+- 中断 3（0CCH）产生中断 3。
+- 若溢出标志为 1，INTO 产生中断 4。
+
