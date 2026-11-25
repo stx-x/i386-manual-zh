@@ -1,5 +1,7 @@
 # 80386 程序员参考手册 · 中文译本
 
+在线地址：<https://stx-x.github.io/i386-manual-zh/>
+
 《Intel 80386 Programmer's Reference Manual (1986)》的静态中文阅读站。保留原书章节结构、节号、图号、页码与英文原文对照，提供全文检索、深浅色、响应式与打印样式。
 
 ## 快速开始
